@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="yellow_green_base_style">#d6e03e</color>
+    <color name="tender_green_ds">#e4f7ce</color>
+    <color name="colorPrimaryDark_green_ds">#e6d148</color>
+    <color name="gray_green_text_ds">#7c8e6a</color>
+
+    <color name="like_background_color_ds">#faff96</color>
+    <color name="color_like_icon">#3ddf24</color>
+</resources>

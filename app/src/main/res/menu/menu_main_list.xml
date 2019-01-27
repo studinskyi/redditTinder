@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/miSwypePhoto"
+        android:enabled="true"
+        android:icon="@drawable/ic_zoom_in_black_24dp"
+        android:orderInCategory="1"
+        android:title="Swype"
+        app:showAsAction="always|withText"/>
+    <item
+        android:id="@+id/miArticleOpenSite"
+        android:enabled="true"
+        android:icon="@drawable/ic_web_black_24dp"
+        android:orderInCategory="2"
+        android:title="Open article"
+        app:showAsAction="always"/>
+    <item
+        android:id="@+id/miSwypeImages"
+        android:enabled="true"
+        android:icon="@drawable/ic_zoom_in_black_24dp"
+        android:orderInCategory="3"
+        android:title="Swype images"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/miLikeListImages"
+        android:enabled="true"
+        android:icon="@drawable/ic_mood_black_24dp"
+        android:orderInCategory="4"
+        android:title="Liked images"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/miDislikedListImages"
+        android:enabled="true"
+        android:icon="@drawable/ic_mood_bad_black_24dp"
+        android:orderInCategory="5"
+        android:title="Disliked images"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/miShowAllImages"
+        android:enabled="true"
+        android:orderInCategory="6"
+        android:title="Show images"
+        app:showAsAction="withText"/>
+</menu>

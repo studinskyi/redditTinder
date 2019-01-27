@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.RegistrationActivity">
+
+    <TextView
+        android:id="@+id/textViewReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="16dp"
+        android:text="Registration user"
+        android:textSize="26sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editLoginReg"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="login user"
+        app:layout_constraintLeft_toLeftOf="@+id/textViewReg"
+        app:layout_constraintTop_toBottomOf="@+id/btnConfirmRegistration" />
+
+    <EditText
+        android:id="@+id/editPasswordReg"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="9dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="password"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/editLoginReg"
+        app:layout_constraintRight_toRightOf="@+id/editLoginReg"
+        app:layout_constraintTop_toBottomOf="@+id/editLoginReg" />
+
+    <EditText
+        android:id="@+id/editConfirmReg"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:text="password"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/editPasswordReg"
+        app:layout_constraintRight_toRightOf="@+id/editPasswordReg"
+        app:layout_constraintTop_toBottomOf="@+id/editPasswordReg" />
+
+    <CheckBox
+        android:id="@+id/chbAdministrator"
+        android:layout_width="331dp"
+        android:layout_height="29dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="12dp"
+        android:checked="true"
+        android:onClick="onClick_chbAdministrator"
+        android:text="пользователь будет администратором"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/editConfirmReg"
+        app:layout_constraintRight_toRightOf="@+id/editConfirmReg"
+        app:layout_constraintTop_toBottomOf="@+id/editConfirmReg" />
+
+    <EditText
+        android:id="@+id/etFirstNameRegistration"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="first name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/chbAdministrator"
+        app:layout_constraintRight_toRightOf="@+id/chbAdministrator"
+        app:layout_constraintTop_toBottomOf="@+id/chbAdministrator" />
+
+    <EditText
+        android:id="@+id/etSurnameRegistration"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="surname"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/etFirstNameRegistration"
+        app:layout_constraintRight_toRightOf="@+id/etFirstNameRegistration"
+        app:layout_constraintTop_toBottomOf="@+id/etFirstNameRegistration" />
+
+    <EditText
+        android:id="@+id/etSecondNameRegistration"
+        android:layout_width="331dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="second name"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/etSurnameRegistration"
+        app:layout_constraintRight_toRightOf="@+id/etSurnameRegistration"
+        app:layout_constraintTop_toBottomOf="@+id/etSurnameRegistration" />
+
+    <Button
+        android:id="@+id/btnConfirmRegistration"
+        android:layout_width="125dp"
+        android:layout_height="54dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:text="Registration confirm"
+        app:layout_constraintLeft_toRightOf="@+id/textViewReg"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</android.support.constraint.ConstraintLayout>

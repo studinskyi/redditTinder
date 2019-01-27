@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/miPreviewToArticleList"
+        android:enabled="true"
+        android:orderInCategory="1"
+        android:title="List articles"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/miPreviewToLikeList"
+        android:enabled="true"
+        android:icon="@drawable/ic_mood_black_24dp"
+        android:orderInCategory="2"
+        android:title="Liked images"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/miPreviewToDislikedList"
+        android:enabled="true"
+        android:icon="@drawable/ic_mood_bad_black_24dp"
+        android:orderInCategory="3"
+        android:title="Disliked images"
+        app:showAsAction="withText"/>
+    <item
+        android:id="@+id/miPreviewToShowAllImages"
+        android:enabled="true"
+        android:orderInCategory="4"
+        android:title="Show all images"
+        app:showAsAction="withText"/>
+</menu>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.LoginActivity">
+
+    <TextView
+        android:id="@+id/tvCaptionLoginUsers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="53dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="6dp"
+        android:text="Sign in"
+        android:textSize="26sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tiLoginInputLayout"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@+id/tvCaptionLoginUsers"
+        app:layout_constraintTop_toBottomOf="@+id/tvCaptionLoginUsers">
+
+        <EditText
+            android:id="@+id/editLogin"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/txt_hint_login"
+            android:inputType="textPersonName"
+            android:text=""
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="63dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tiPasswordInputLayout"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/tiLoginInputLayout"
+        app:layout_constraintRight_toRightOf="@+id/tiLoginInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tiLoginInputLayout">
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="245dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:text=""
+            tools:layout_editor_absoluteX="53dp"
+            tools:layout_editor_absoluteY="190dp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/btnOk"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Ok"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="@+id/tiPasswordInputLayout"
+        app:layout_constraintRight_toLeftOf="@+id/btnRegistration"
+        app:layout_constraintTop_toBottomOf="@+id/tiPasswordInputLayout" />
+
+    <Button
+        android:id="@+id/btnRegistration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginRight="-28dp"
+        android:layout_marginTop="8dp"
+        android:text="Registration"
+        app:layout_constraintBottom_toBottomOf="@+id/btnOk"
+        app:layout_constraintRight_toRightOf="@+id/tiPasswordInputLayout"
+        app:layout_constraintTop_toBottomOf="@+id/tiPasswordInputLayout"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</android.support.constraint.ConstraintLayout>

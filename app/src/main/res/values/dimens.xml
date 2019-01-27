@@ -1,0 +1,15 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="activity_margin">16dp</dimen>
+    <dimen name="image_margin">48dp</dimen>
+    <dimen name="card_padding">40dp</dimen>
+
+    <dimen name="padding_5dp">5dp</dimen>
+
+
+    <dimen name="margin_5dp">5dp</dimen>
+
+
+    <dimen name="height_horizontal_image_thumbs">60dp</dimen>
+</resources>
