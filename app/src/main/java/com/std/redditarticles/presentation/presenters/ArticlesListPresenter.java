@@ -10,8 +10,6 @@ import com.std.redditarticles.presentation.views.IArticlesView;
 
 import java.util.ArrayList;
 
-import static com.std.redditarticles.models.RedditItem.URL_REDDIT_ARTICLES;
-
 public class ArticlesListPresenter {
 
     private final IArticlesView mIArticlesView;
@@ -34,7 +32,7 @@ public class ArticlesListPresenter {
     public int startAsyncTask_LoadArticles() {
         //mTask = new ReadArticlesAsyncTask(mContext);
         mTask.setContext(mContext);
-        mTask.execute(URL_REDDIT_ARTICLES);
+        mTask.execute(RedditItem.Companion.getURL_REDDIT_ARTICLES());
         return 0;
     }
 

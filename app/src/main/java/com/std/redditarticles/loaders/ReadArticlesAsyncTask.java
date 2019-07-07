@@ -24,12 +24,6 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
-import static com.std.redditarticles.models.RedditItem.AUTHOR_ARTICLE;
-import static com.std.redditarticles.models.RedditItem.BASE_URL;
-import static com.std.redditarticles.models.RedditItem.PARMA_LINK;
-import static com.std.redditarticles.models.RedditItem.TITLE_ARTICLE;
-import static com.std.redditarticles.models.RedditItem.URL_ARTICLE;
-
 public class ReadArticlesAsyncTask extends AsyncTask<String, Integer, ArrayList<RedditItem>> {
 
     private String mUrlReddit; // для тестирования etRedditURL.setText("https://www.reddit.com/r/aww.json");
@@ -79,15 +73,15 @@ public class ReadArticlesAsyncTask extends AsyncTask<String, Integer, ArrayList<
                         String imgUrl = ((JSONObject) currentObject.getJSONObject("preview").
                                 getJSONArray("images").get(0)).
                                 getJSONObject("source").
-                                get(URL_ARTICLE).toString();
+                                get(RedditItem.Companion.getURL_ARTICLE()).toString();
 
                         RedditItem newRssArticle = new RedditItem(
                                 currentObject.getString("id"),
-                                currentObject.getString(TITLE_ARTICLE),
+                                currentObject.getString(RedditItem.Companion.getTITLE_ARTICLE()),
                                 getDateCreatedNews(currentObject, TimeUnit.SECONDS),
-                                BASE_URL + currentObject.getString(PARMA_LINK),
+                                RedditItem.Companion.getBASE_URL() + currentObject.getString(RedditItem.Companion.getPARMA_LINK()),
                                 imgUrl,
-                                currentObject.getString(AUTHOR_ARTICLE),
+                                currentObject.getString(RedditItem.Companion.getAUTHOR_ARTICLE()),
                                 i,
                                 false,
                                 false);
@@ -129,8 +123,9 @@ public class ReadArticlesAsyncTask extends AsyncTask<String, Integer, ArrayList<
             BufferedReader br = new BufferedReader(
                     new InputStreamReader(httpConnect.getInputStream())
             );
-            while ((tmp = br.readLine()) != null)
+            while ((tmp = br.readLine()) != null) {
                 sb.append(tmp).append("\n");
+            }
             br.close();
 
         } catch (IOException e) {
@@ -156,8 +151,9 @@ public class ReadArticlesAsyncTask extends AsyncTask<String, Integer, ArrayList<
     @Override
     protected void onProgressUpdate(Integer... values) {
         super.onProgressUpdate(values);
-        if (mContext != null)
+        if (mContext != null) {
             UtilsReddit.showToast(mContext, "load articles: " + values[0]);
+        }
     }
 
     public String getMsgError() {
@@ -173,7 +169,7 @@ public class ReadArticlesAsyncTask extends AsyncTask<String, Integer, ArrayList<
         Date value = null;
         String msgError = "";
         try {
-            long created = currentObject.getLong(RedditItem.CREATED);
+            long created = currentObject.getLong(RedditItem.Companion.getCREATED());
             if (created > 0L) {
                 created = TimeUnit.MILLISECONDS.convert(created, sourceUnit);
                 value = new Date(created);
